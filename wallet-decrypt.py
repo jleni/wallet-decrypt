@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python
 from __future__ import print_function
 
 import argparse
@@ -30,6 +30,10 @@ def get_wallet(filename, password):
         len(data[AES.block_size:])
         padded_plain = cipher.decrypt(data[AES.block_size:])
         pad_len = padded_plain[-1]
+
+        if isinstance(pad_len, str):
+            pad_len = ord(pad_len)
+
         pbdata = padded_plain[:-pad_len]
         w = wallet_pb2.Wallet()
         w.ParseFromString(pbdata)
