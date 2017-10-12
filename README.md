@@ -1,4 +1,4 @@
-# Bitcoin Wallet Decrypt
+# Bitcoin Wallet Decrypt (BackupFile -> Mnemonic)
 
 If you have been using the Bitcoin Wallet from *Bitcoin Wallet developers*, it is likely you want to get your Bitcoin Cash or take control of your private keys.
 
