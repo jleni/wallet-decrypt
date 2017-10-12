@@ -8,16 +8,20 @@ I wrote this script to simplify this process for myself. This script will obtain
 
 ## Instructions
 
+### In your mobile:
+
 - Go to `Safety` and remove the spending PIN.
 - Backup your wallet. Remember the password you use.
-- Connect your phone with a usb cable and copy the backup file.
+- Connect your phone with a usb cable and copy the backup file to your computer.
 
-Dependencies
+### In your computer
+
+Install dependencies
 ```
 pip install pycrypto
 ```
 
-Run the script (replace with the appropriate filename and password)
+Run the script (replace with the appropriate FILENAME(backup file) and PASSWORD(your backup password))
 ```
 wallet-decrypt.py FILENAME PASSWORD
 ```
