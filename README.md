@@ -18,7 +18,7 @@ I wrote this script to simplify this process for myself. This script will obtain
 
 Install dependencies
 ```
-pip install pycrypto
+pip install pycrypto protobuf
 ```
 
 Run the script (replace with the appropriate FILENAME(backup file) and PASSWORD(your backup password))
