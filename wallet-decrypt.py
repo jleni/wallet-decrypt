@@ -3,6 +3,7 @@ from __future__ import print_function
 
 import argparse
 import base64
+import getpass
 from hashlib import md5
 from Crypto.Cipher import AES
 import wallet_pb2
@@ -43,11 +44,11 @@ def get_wallet(filename, password):
 def main():
     parser = argparse.ArgumentParser(description='Decrypt Bitcon Wallet (Schildbach''s Bitcoin)')
     parser.add_argument('filename')
-    parser.add_argument('password')
 
     args = parser.parse_args()
 
-    w = get_wallet(args.filename, args.password)
+    password = getpass.getpass()
+    w = get_wallet(args.filename, password)
     for k in w.key:
         if len(k.secret_bytes) > 0 and k.type == 3:
             print("\nYou can enter this information in Electrum/Electrum cash\n")
